@@ -1,14 +1,13 @@
 require("@nomiclabs/hardhat-waffle");
 require("dotenv").config();
 
-//const privateKey = process.env.PRIVATE_KEY || "01234567890123456789";
-const privateKey = "01234567890123456789";
+const privateKey = process.env.PRIVATE_KEY || "01234567890123456789";
 
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
-      chainId: 1337,
+      chainId: 31337,
     },
     mumbai: {
       url: "https://rpc-mumbai.matic.today",

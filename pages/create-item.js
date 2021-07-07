@@ -10,8 +10,8 @@ const client = ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
 
 import { nftaddress, nftmarketaddress } from "../config";
 
-import NFT from "../artifacts/contracts/NFT.sol/NFT.json";
-import Market from "../artifacts/contracts/Market.sol/NFTMarket.json";
+import NFT from "../artifacts/contracts/NFTCreator.sol/NFTCreator.json";
+import Market from "../artifacts/contracts/NFTMarket.sol/NFTMarket.json";
 
 export default function Home() {
   const [fileUrl, setFileUrl] = useState(null);
@@ -28,6 +28,7 @@ export default function Home() {
       const added = await client.add(file, {
         progress: (prog) => console.log(`received: ${prog}`),
       });
+      console.log(added);
       const url = `https://ipfs.infura.io/ipfs/${added.path}`;
       setFileUrl(url);
     } catch (error) {
@@ -108,7 +109,7 @@ export default function Home() {
         {fileUrl && <img className="rounded mt-4" width="350" src={fileUrl} />}
         <button
           onClick={createMarket}
-          className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg"
+          className="transition duration-500 ease-in-out font-bold mt-4 bg-green-500 text-white rounded p-4 shadow-lg transform hover:-translate-y-1 hover:scale-95"
         >
           Create Digital Asset
         </button>
