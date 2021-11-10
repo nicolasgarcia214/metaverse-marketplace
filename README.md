@@ -12,7 +12,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-[![](https://github.com/nicolasgarcia214/digital-marketplace/blob/main/metaverse.gif)](#)
+[![](https://github.com/nicolasgarcia214/metaverse-marketplace/blob/main/metaverse.gif)](#)
 
 # METAVERSE MARKETPLACE 🧪
 
