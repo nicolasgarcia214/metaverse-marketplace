@@ -98,7 +98,7 @@ export default function Home() {
                   {nft.price} ETH
                 </p>
                 <button
-                  className="w-full bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-12 rounded"
+                  className="w-full bg-green-500 hover:bg-green-500 text-white font-bold py-2 px-12 rounded"
                   onClick={() => buyNft(nft)}
                 >
                   Buy
